@@ -9,30 +9,34 @@ export const metadata: Metadata = {
 
 const team = [
   {
+    name: "Jordan Avery",
+    role: "Squad Lead / SRE",
+    bio: "Focused on reliability engineering and incident response process.",
+    photo: "/team/jordan.jpg",
+  },
+  {
     name: "Giorgi Vakiashvili",
     role: "DevOps Engineer",
     bio: "Builds and operates the infrastructure behind Koruldi's client engagements.",
     photo: "/team/giorgi.jpg",
   },
   {
-    name: "Jordan Avery",
-    role: "Squad Lead / SRE",
-    bio: "Focused on reliability engineering and incident response process.",
-  },
-  {
     name: "Priya Nair",
     role: "Cloud Infrastructure Engineer",
     bio: "Terraform, AWS, and cost-optimized architecture design.",
+    photo: "/team/priya.jpg",
   },
   {
     name: "Sam Okafor",
     role: "Platform Engineer",
     bio: "Kubernetes, container platforms, and internal developer tooling.",
+    photo: "/team/sam.jpg",
   },
   {
     name: "Lena Kowalski",
     role: "CI/CD & Automation Engineer",
     bio: "Pipeline design, release automation, and testing infrastructure.",
+    photo: "/team/lena.jpg",
   },
 ];
 
