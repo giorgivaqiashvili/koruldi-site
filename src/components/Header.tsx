@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
@@ -6,9 +7,14 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-line bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-brand-ink">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-navy text-sm font-bold text-brand-accent">
-            {"</>"}
-          </span>
+          <Image
+            src="/koruldi-logo.jpg"
+            alt={`${siteConfig.name} logo`}
+            width={36}
+            height={36}
+            className="rounded-full"
+            priority
+          />
           {siteConfig.name}
         </Link>
 

@@ -1,6 +1,5 @@
 import Container from "@/components/Container";
 import ServiceRequestForm from "@/components/ServiceRequestForm";
-import { siteConfig } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,20 +25,9 @@ export default function ContactPage() {
       </section>
 
       <section className="py-20">
-        <Container className="grid gap-12 lg:grid-cols-[2fr_1fr]">
+        <Container className="max-w-2xl">
           <div className="rounded-lg border border-brand-line p-8">
             <ServiceRequestForm />
-          </div>
-
-          <div>
-            <h2 className="text-lg font-semibold text-brand-ink">Prefer email?</h2>
-            <p className="mt-2 text-sm text-brand-slate">
-              Reach us directly at{" "}
-              <a href={`mailto:${siteConfig.email}`} className="text-brand-accent-dark underline">
-                {siteConfig.email}
-              </a>
-              .
-            </p>
           </div>
         </Container>
       </section>
