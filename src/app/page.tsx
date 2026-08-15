@@ -6,14 +6,35 @@ const highlights = [
   {
     title: "CI/CD Pipelines",
     description: "Automated build, test, and deploy pipelines that ship safely, every time.",
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 7h11a3 3 0 013 3v1m0 0l-2.5-2.5M18 11l2.5-2.5M20 17H9a3 3 0 01-3-3v-1m0 0l2.5 2.5M6 13l-2.5 2.5"
+      />
+    ),
   },
   {
     title: "Cloud Infrastructure",
     description: "Infrastructure as Code on AWS, GCP, or Azure — reproducible and version controlled.",
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M7 17a4 4 0 01-1-7.874A5.5 5.5 0 0116.9 8.02 4.5 4.5 0 0117 17H7z"
+      />
+    ),
   },
   {
     title: "Observability",
     description: "Monitoring, logging, and alerting so you know about problems before your customers do.",
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 17l4-8 4 5 3-4 4 3M3 17h18"
+      />
+    ),
   },
 ];
 
@@ -88,7 +109,18 @@ export default function Home() {
           <div className="mt-12 grid gap-8 sm:grid-cols-3">
             {highlights.map((item) => (
               <div key={item.title} className="rounded-lg border border-brand-line p-6">
-                <div className="h-10 w-10 rounded-md bg-brand-navy/5" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-md bg-brand-navy/5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.75}
+                    stroke="currentColor"
+                    className="h-6 w-6 text-brand-accent-dark"
+                  >
+                    {item.icon}
+                  </svg>
+                </div>
                 <h3 className="mt-4 text-lg font-semibold text-brand-ink">{item.title}</h3>
                 <p className="mt-2 text-sm text-brand-slate">{item.description}</p>
               </div>
