@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Giorgi Vaqiashvili",
+    name: "Giorgi Vakiashvili",
     role: "DevOps Engineer",
     bio: "Builds and operates the infrastructure behind Koruldi's client engagements.",
     photo: "/team/giorgi.jpg",
