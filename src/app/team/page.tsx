@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Container from "@/components/Container";
+import Avatar from "@/components/Avatar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,6 +8,13 @@ export const metadata: Metadata = {
 };
 
 const team = [
+  {
+    name: "Giorgi Vaqiashvili",
+    role: "DevOps Engineer",
+    bio: "Builds and operates the infrastructure behind Koruldi's client engagements.",
+    linkedin: "https://www.linkedin.com/in/giorgi-vakiashvili-6ba83314a/",
+    photo: "/team/giorgi.jpg",
+  },
   {
     name: "Jordan Avery",
     role: "Squad Lead / SRE",
@@ -48,13 +57,33 @@ export default function TeamPage() {
 
       <section className="py-20">
         <Container>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {team.map((member) => (
               <div key={member.name} className="rounded-lg border border-brand-line p-6 text-center">
-                <div className="mx-auto h-20 w-20 rounded-full bg-brand-navy/10" />
+                {member.photo ? (
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    width={80}
+                    height={80}
+                    className="mx-auto rounded-full object-cover"
+                  />
+                ) : (
+                  <Avatar name={member.name} size={80} />
+                )}
                 <h3 className="mt-4 text-base font-semibold text-brand-ink">{member.name}</h3>
                 <p className="text-sm font-medium text-brand-accent-dark">{member.role}</p>
                 <p className="mt-2 text-sm text-brand-slate">{member.bio}</p>
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block text-sm font-medium text-brand-accent-dark underline"
+                  >
+                    LinkedIn
+                  </a>
+                )}
               </div>
             ))}
           </div>
