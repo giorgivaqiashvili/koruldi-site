@@ -12,11 +12,10 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <Image
-                src="/koruldi-logo.jpg"
+                src="/koruldi-logo.png"
                 alt={`${siteConfig.name} logo`}
-                width={32}
-                height={32}
-                className="rounded-full"
+                width={44}
+                height={44}
               />
               <p className="text-lg font-semibold text-white">{siteConfig.name}</p>
             </div>

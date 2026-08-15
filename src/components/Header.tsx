@@ -8,11 +8,10 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-brand-ink">
           <Image
-            src="/koruldi-logo.jpg"
+            src="/koruldi-logo.png"
             alt={`${siteConfig.name} logo`}
-            width={36}
-            height={36}
-            className="rounded-full"
+            width={48}
+            height={48}
             priority
           />
           {siteConfig.name}
