@@ -12,7 +12,6 @@ const team = [
     name: "Giorgi Vaqiashvili",
     role: "DevOps Engineer",
     bio: "Builds and operates the infrastructure behind Koruldi's client engagements.",
-    linkedin: "https://www.linkedin.com/in/giorgi-vakiashvili-6ba83314a/",
     photo: "/team/giorgi.jpg",
   },
   {
@@ -74,16 +73,6 @@ export default function TeamPage() {
                 <h3 className="mt-4 text-base font-semibold text-brand-ink">{member.name}</h3>
                 <p className="text-sm font-medium text-brand-accent-dark">{member.role}</p>
                 <p className="mt-2 text-sm text-brand-slate">{member.bio}</p>
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-brand-accent-dark underline"
-                  >
-                    LinkedIn
-                  </a>
-                )}
               </div>
             ))}
           </div>
