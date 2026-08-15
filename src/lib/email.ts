@@ -3,7 +3,7 @@ import type { ServiceRequestInput } from "@/lib/validation";
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const notifyTo = process.env.CONTACT_NOTIFY_EMAIL;
-const fromAddress = process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev";
+const fromAddress = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
 export async function sendServiceRequestNotification(data: ServiceRequestInput) {
   if (!resendApiKey || !notifyTo) {
