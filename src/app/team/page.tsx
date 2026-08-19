@@ -67,8 +67,6 @@ export default function TeamPage() {
                   <Image
                     src={member.photo}
                     alt={member.name}
-<p className="mt-2 text-sm text-brand-slate">{member.bio}</p>
-                     <p className="mt-2 text-sm text-brand-slate">{member.bio}</p>
                     width={80}
                     height={80}
                     className="mx-auto rounded-full object-cover"
