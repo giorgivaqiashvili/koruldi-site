@@ -14,8 +14,6 @@ datasource db {
 
 model ServiceRequest {
   id          String   @id @default(cuid())
-  name        String
-  email       String
   company     String?
   serviceType String
   message     String
