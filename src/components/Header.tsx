@@ -33,7 +33,7 @@ export default function Header() {
           href="/contact"
           className="rounded-md bg-brand-navy px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-navy-soft"
         >
-          Request
+          Request Services
         </Link>
       </div>
 
